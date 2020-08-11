@@ -23,6 +23,8 @@ class Lexer():
         self.lexer.add('TEXT',r'\b[A-Z]')
         # Ignore spaces
         self.lexer.ignore('\s+')
+        # AMK!!!!!
+        self.lexer.add('AMK', r'hidden')
 
     def get_lexer(self):
         self._add_tokens()

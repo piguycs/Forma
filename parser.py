@@ -25,6 +25,7 @@ class Parser():
 
         @self.pg.production('expression : expression SUM expression')
         @self.pg.production('expression : expression SUB expression')
+        @self.pg.production('expression : expression MUL expression')
         def expression(p):
             left = p[0]
             right = p[2]
@@ -34,7 +35,7 @@ class Parser():
             elif operator.gettokentype() == 'SUB':
                 return Sub(self.builder, self.module, left, right)
             elif operator.gettokentype() == 'MUL':
-                return Mult(self.builder, self.module, left, right)
+                return Mul(self.builder, self.module, left, right)
 
         @self.pg.production('expression : NUMBER')
         def number(p):
