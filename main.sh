@@ -1,1 +1,1 @@
-python3.8 compile.py b numberswapper.endo
+python3.8 compile.py d amk.endo

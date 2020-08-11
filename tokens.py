@@ -16,9 +16,7 @@ class tokenizer:
     "input",    # takes string input up to 100 characters 
     "open",     # open a file (same syntax as C)
     "read",     # read from a file
-    "close",    # close a file
-    "amk",      # does something
-    "sq"        # square
+    "close"     # close a file
   ]
   operators = [
     "{",
