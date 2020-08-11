@@ -1,0 +1,5 @@
+//REVO//
+print ("REVO compiled code\n")
+print ("\nBanan")
+int num = 1
+print ("\n%d\n",num)

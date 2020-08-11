@@ -1,49 +1,72 @@
-from rply import ParserGenerator
-from ast import Number, Sum, Sub, Print, Mul
 
-
-class Parser():
-    def __init__(self, module, builder, printf):
-        self.pg = ParserGenerator(
-            # A list of all token names accepted by the parser.
-            ['NUMBER', 'PRINT', 'OPEN_PAREN', 'CLOSE_PAREN',
-             'SEMI_COLON', 'SUM', 'SUB', 'TEXT', 'MUL']
-        )
-        self.module = module
-        self.builder = builder
-        self.printf = printf
-
-    def parse(self):
-        @self.pg.production('program : PRINT OPEN_PAREN expression CLOSE_PAREN SEMI_COLON')
-        @self.pg.production('program : TEXT OPEN_PAREN text CLOSE_PAREN SEMI_COLON')
-
-        def program(p):
-            return Print(self.builder, self.module, self.printf, p[2])
-        @self.pg.production('text : text TEXT text')
-        def text(p):
-            return Print(self.builder, self.module, p)
-
-        @self.pg.production('expression : expression SUM expression')
-        @self.pg.production('expression : expression SUB expression')
-        @self.pg.production('expression : expression MUL expression')
-        def expression(p):
-            left = p[0]
-            right = p[2]
-            operator = p[1]
-            if operator.gettokentype() == 'SUM':
-                return Sum(self.builder, self.module, left, right)
-            elif operator.gettokentype() == 'SUB':
-                return Sub(self.builder, self.module, left, right)
-            elif operator.gettokentype() == 'MUL':
-                return Mul(self.builder, self.module, left, right)
-
-        @self.pg.production('expression : NUMBER')
-        def number(p):
-            return Number(self.builder, self.module, p[0].value)
-
-        @self.pg.error
-        def error_handle(token):
-            raise ValueError(token)
-
-    def get_parser(self):
-        return self.pg.build()
+def parse(token,compiles,line):
+  if token.startswith('//') == True:
+    if compiles == True:
+      return "//"
+    else:
+      return "comment"
+  if token.startswith('if') == True:
+    if compiles == True:
+      return "if"
+    else:
+      return "if statement"
+  if token.startswith('print') == True:
+    if compiles == True:
+      return "printf"
+    else:
+      return "display a value"
+  if token.startswith('line-end') == True:
+    if compiles == True:
+      return " "
+    else:
+      return " "
+  if token.startswith('int') == True:
+    if compiles == True:
+      return "int"
+    else:
+      return "create an integer value"
+  if token.startswith('}') == True:
+    if compiles == True:
+      return "}"
+    else:
+      return "end of bracket"
+  if token.startswith('{') == True:
+    if compiles == True:
+      return "{"
+    else:
+      return "start of bracket"
+  if token.startswith('input') == True:
+    if compiles == True:
+      return "scanf"
+    else:
+      return "input from keyboard"
+  if token.startswith('open') == True:
+    if compiles == True:
+      return "fopen"
+    else:
+      return "open file"
+  if token.startswith('read') == True:
+    if compiles == True:
+      return "fscanf"
+    else:
+      return "read all from file"
+  if token.startswith('close') == True:
+    if compiles == True:
+      return "fclose"
+    else:
+      return "close file"
+  if token.startswith('supercoolfunction') == True:
+    if compiles == True:
+      return '''printf("This is an epic function to demonstrate the use cases for this easily modifiable language")'''
+    else:
+      return "cool function"
+  if token.startswith('amk') == True:
+    if compiles == True:
+      return '''printf("antimrkey, Is this an easteregg? Yes!!!!")'''
+    else:
+      return "amk"  
+  if token.startswith('sq') == True:
+    if compiles == True:
+      return 'sqrt ('+args+')'
+  else:
+    return "No assinged type or value"

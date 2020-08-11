@@ -1,0 +1,5 @@
+git add .
+git config --global user.email "huskielunar@gmail.com"
+git config --global user.name "HUSKI3"
+git commit -m "Automatic deploy"
+git push origin master -f
