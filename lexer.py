@@ -16,6 +16,7 @@ class Lexer():
         # Operators
         self.lexer.add('SUM', r'\+')
         self.lexer.add('SUB', r'\-')
+        self.lexer.add('MUL', r'\*')
         # Number
         self.lexer.add('NUMBER', r'\d+')
         # Text
