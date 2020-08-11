@@ -13,5 +13,5 @@ os.system("scp root@161.35.159.211:/root/output.o output.o")
 #print(r.text[:100])
 #Now I'll set up a webserver shit thing on the ixserver 
 #also try vscode(mc titles be like)
-print("====== Output")
+print("====== Output ======")
 os.system("chmod +x compile && ./compile")
