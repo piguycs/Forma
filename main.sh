@@ -1,1 +1,1 @@
-python3.8 compile.py d amk.endo
+python3.8 compile.py b amk.endo

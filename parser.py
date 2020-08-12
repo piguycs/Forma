@@ -66,6 +66,6 @@ def parse(token,compiles,line):
       return "amk"  
   if token.startswith('sq') == True:
     if compiles == True:
-      return '''printf("square")'''
+      return '''int num, squ;\n printf("number?");\n scanf("%d", &num);\n squ = num * num;\n printf("%d",squ)'''
   else:
     return "No assinged type or value"
