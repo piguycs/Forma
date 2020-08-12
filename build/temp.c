@@ -5,7 +5,6 @@
  scanf("%d", &num);
  squ = num * num;
  printf("%d",squ) ;
- printf("antimrkey, Is this an easteregg? Yes!!!!") ;
   ;
 
 return 0;
