@@ -1,6 +1,6 @@
 //Revo version 1.0.4 numberswapper.rv//
 double first, second, temp 
-sq
+amk
 print ("\nEnter first number: ") 
 input ("%lf", &first) 
 print ("Enter second number: ") 

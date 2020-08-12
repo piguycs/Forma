@@ -1,2 +1,16 @@
-Print found, info:print ("mmm"
---- > Token: print          <---- yes ||| printf
+
+--- > Token: //Revo         <---- no  ||| 
+
+--- > Token: version        <---- no  ||| 
+
+--- > Token: 1.0.4//        <---- no  ||| 
+
+--- > Token: line-end       <---- yes |||  
+
+--- > Token: sq             <---- yes ||| printf("square")
+
+--- > Token: line-end       <---- yes |||  
+
+--- > Token:                <---- no  ||| 
+
+--- > Token: line-end       <---- yes |||  

@@ -2,8 +2,6 @@
 from tokens import tokenizer, compiler
 import os
 import sys
-
-
 #open file
 class RevoMain:
   def __init__(self, filename):
