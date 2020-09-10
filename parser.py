@@ -1,3 +1,4 @@
+
 def parse(token,compiles,line):
   if token.startswith('//') == True:
     if compiles == True:
@@ -36,7 +37,7 @@ def parse(token,compiles,line):
       return "start of bracket"
   if token.startswith('input') == True:
     if compiles == True:
-      return "scanf"
+      return " "
     else:
       return "input from keyboard"
   if token.startswith('open') == True:
@@ -48,24 +49,26 @@ def parse(token,compiles,line):
     if compiles == True:
       return "fscanf"
     else:
-      return "read all from file"
+      return "read all data from file"
   if token.startswith('close') == True:
     if compiles == True:
       return "fclose"
     else:
       return "close file"
+  if token.startswith('main') == True:
+    if compiles == True:
+      return "int main"
+    else:
+      return "create a main function"
+  if token.startswith('re_void') == True:
+    if compiles == True:
+      return "static void"
+    else:
+      return "create a main function"
   if token.startswith('supercoolfunction') == True:
     if compiles == True:
       return '''printf("This is an epic function to demonstrate the use cases for this easily modifiable language")'''
     else:
       return "cool function"
-  if token.startswith('amk') == True:
-    if compiles == True:
-      return '''printf("antimrkey, Is this an easteregg? Yes!!!!")'''
-    else:
-      return "amk"  
-  if token.startswith('sq') == True:
-    if compiles == True:
-      return '''int num, squ;\n printf("number?");\n scanf("%d", &num);\n squ = num * num;\n printf("%d",squ)'''
   else:
     return "No assinged type or value"

@@ -1,0 +1,28 @@
+------------                  endoparse ||| description
+--- > Token: line-end       <---- ||| None
+--- > Token: main {         <---- ||| int main
+--- > Token: line-end       <---- ||| None
+--- > Token: double first, second, temp<---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: input ("%lf", &first)<---- |||  
+--- > Token: line-end       <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: input ("%lf", &second)<---- |||  
+--- > Token: line-end       <---- ||| None
+--- > Token: temp = first   <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: first = second <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: second = temp  <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token:                <---- ||| None
+--- > Token: }              <---- ||| }
+--- > Token: line-end       <---- ||| None
+--- > Token:                <---- ||| None
+--- > Token: line-end       <---- ||| None
+--- > Token:                <---- ||| None
+--- > Token: line-end       <---- ||| None

@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-from tokens import tokenizer, compiler
+from codegen import compiler
+from tokengen import tokenizer
 import os
 import sys
 #open file
 class RevoMain:
   def __init__(self, filename):
     self.f = open(filename,"r")
-  def main(self):
-    tokenizer.gentokens(self.f)
   def build(self):
-    compiler.scel(self.f,"b")
+    tokens = tokenizer.create_tokens(self.f)
+    compiler.scel(tokens)
   def debug(self):
     compiler.scel(self.f,"d")
 
