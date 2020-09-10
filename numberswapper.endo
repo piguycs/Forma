@@ -1,4 +1,4 @@
-//Revo version 1.0.4 numberswapper.endo//
+//Forma version 1.0.4 numberswapper.endo//
 double first, second, temp 
 print ("\nEnter first number: ") 
 input ("%lf", &first) 
