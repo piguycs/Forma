@@ -24,7 +24,7 @@ if __name__ == "__main__":
     else:
       p.debug()
     print("=== Output ===")
-    os.system("gcc build/temp.c -o kavat")
+    os.system("g++ build/temp.c -o kavat")
     os.system("./kavat")
   else:
     print("Please specify function (build or debug)")
@@ -32,5 +32,5 @@ else:
   p = RevoMain("test.rv")
   p.build()
   print("=== Output ===")
-  os.system("gcc build/temp.c ")
+  os.system("g++ build/temp.c ")
   os.system("./a.out")

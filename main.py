@@ -14,5 +14,5 @@ class RevoMain:
 p = RevoMain(str(sys.argv[1]))
 p.build()
 print("=== Output ===")
-os.system("gcc build/temp.c ")
+os.system("g++ build/temp.c ")
 os.system("./a.out")

@@ -22,7 +22,7 @@ def parse(token,compiles,line):
       return " "
   if token.startswith('int') == True:
     if compiles == True:
-      return "int"
+      return " "
     else:
       return "create an integer value"
   if token.startswith('}') == True:
@@ -57,7 +57,7 @@ def parse(token,compiles,line):
       return "close file"
   if token.startswith('main') == True:
     if compiles == True:
-      return "int main"
+      return " "
     else:
       return "create a main function"
   if token.startswith('re_void') == True:

@@ -16,7 +16,7 @@ class compiler:
       #translate Revo to C for compilation using parser
       print("=== Starting translation ===")
       
-      f.write("#include <stdio.h> \n")
+      f.write('#include "iostream" \n')
       
       
       #check keywords and display information about keywords
@@ -112,7 +112,54 @@ class compiler:
                 line.append(finword)
             
             #print(line)
-            finalcode += "\n int main()"+str(line[0])+" "
+            finalcode += "\n int main"+str(line[0])+" "
+
+        ########################
+        # INT FUNCTION
+        ########################
+
+
+        if token[1].startswith("int"):
+            line =  []
+            word = ""
+            
+            for word in tokens[tokens.index(token):]:
+              #print("word =",word)
+              
+              if word[1] == "line-end":
+                break
+              else:
+                finword = word[1].replace("int",'')
+                #print("finword =",finword)
+                line.append(finword)
+                print(line)
+            
+            #print(line)
+            finalcode += "\n int "+str(line[0])+" "
+            #print(finalcode)
+            #input("Final code for int")
+        
+        ########################
+        # IF FUNCTION
+        ########################
+
+
+        if token[1].startswith("if"):
+            line =  []
+            word = ""
+            
+            for word in tokens[tokens.index(token):]:
+              #print("word =",word)
+              
+              if word[1] == "line-end":
+                break
+              else:
+                finword = word[1].strip("if")
+                #print("finword =",finword)
+                line.append(finword)
+            
+            #print(line)
+            finalcode += "\n if "+str(line[0])+" "
 
 
         ############
@@ -125,7 +172,8 @@ class compiler:
             if tokens[tokens.index(token)-1][1] in tokengen.token_data.operators:
               finalcode += "\n"
             else:
-              finalcode += ";\n"
+              if tokens[tokens.index(token)-1][1] != "line-end" and  tokens[tokens.index(token)-1][1] != "if":
+                finalcode += ";\n"
           
           else:
             #if state =="d":

@@ -1,25 +1,31 @@
-#include <stdio.h> 
+#include "iostream" 
+
+ int main() {    ;
+ double n1, n2, n3 ;
+ std::cout << "Hello World!" ;
+
+ printf ("Enter three different numbers: ") ;
+
+ scanf ("%lf %lf %lf", &n1, &n2, &n3)    ;
 ;
 
- int main() { ;
- double first, second, temp ;
+ if  (n1 >= n2 && n1 >= n3) ;
+ { 
 
- printf ("Numberswapper.endo\n") ;
+ printf ("%.2f is the largest number.", n1) ;
+ } 
+;
 
- printf ("Enter first number: ") ;
+ if  (n2 >= n1 && n2 >= n3) ;
+ { 
 
- scanf ("%lf", &first)    ;
+ printf ("%.2f is the largest number.", n2) ;
+ } 
+;
 
- printf ("Enter second number: ") ;
+ if  (n3 >= n1 && n3 >= n2){ ;
 
- scanf ("%lf", &second)    ;
- temp = first ;
- first = second ;
- second = temp ;
-
- printf ("\nAfter swapping, firstNumber = %.2lf\n", first) ;
-
- printf ("After swapping, secondNumber = %.2lf\n", second) ;
-   } 
+ printf ("%.2f is the largest number.", n3) ;
+ }  } 
   ;
   ;
