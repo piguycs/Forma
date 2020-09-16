@@ -47,7 +47,7 @@ class compiler:
                 #print("finword =",finword)
                 line.append(finword)
             #print(line)
-            finalcode += "\n printf"+str(line[0])+" "
+            finalcode += "\n cout"+str(line[0])+" "
             continue
         
         ########################
@@ -91,7 +91,7 @@ class compiler:
                 line.append(finword)
             
             #print(line)
-            finalcode += "\n scanf"+str(line[0])+" "
+            finalcode += "\n cin"+str(line[0])+" "
 
         ########################
         # Main FUNCTION

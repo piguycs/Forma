@@ -12,7 +12,7 @@ def parse(token,compiles,line):
       return "if statement"
   if token.startswith('print') == True:
     if compiles == True:
-      return "printf"
+      return "cout"
     else:
       return "display a value"
   if token.startswith('line-end') == True:

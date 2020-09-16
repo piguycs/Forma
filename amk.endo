@@ -1,22 +1,23 @@
-using namespace std;
+// AMK ENDO//
+using namespace std
 main() {    
 float n1, n2, n3
-cout << "Enter three numbers: "
-cin >> n1 >> n2 >> n3
+print << "Enter three numbers: "
+input >> n1 >> n2 >> n3
 if (n1 >= n2 && n1 >= n3)
 {    
-  cout << "Largest number: " << n1
+print << "Largest number: " << n1
 }
 if (n2 >= n1 && n2 >= n3)
 {    
-  cout << "Largest number: " << n2
+print << "Largest number: " << n2
 }
 if (n3 >= n1 && n3 >= n2)
 {    
-  cout << "Largest number: " << n3
+print << "Largest number: " << n3
 }
 else
 {
-  cout << "\nbruh\n"
+print << "\nExecution finished!\n"
 }
 }
