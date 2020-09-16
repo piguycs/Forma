@@ -15,8 +15,8 @@ In Forma there are multiple ways to store data, they are called variable types. 
   - String - for storing words, sentences or any data that is in text format
   - Integers - for storing numbers, these can be positive, negative or zero, but no decimal places cause thats floats
   - Floats - for storing numbers with a decimal point (get it? floating point? yeah fun)
-  - Char - while python classifies characters as parts of string, its still considered a seperate data type in other languages like C and its derivatives
-  - Lists (arrays) - lists are for storing multiple variables in one place, something like [string,int,andsoforth]
+  - Char - Char can be used to store characters
+  - Arrays - lists are for storing multiple variables in one place, something like [string,int,andsoforth]
   - Dictionaries - like lists but have keys to locate the data in the list, ie. {1: 'apple', 2: 'ball'}, the numbers are keys in this case, but they can also be strings.
 
 ### Built-in functions
