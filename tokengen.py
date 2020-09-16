@@ -53,7 +53,7 @@ class tokenizer:
       f+=1
       #remove newlines from tokens and entries
       if "\n" in token:
-        print(token)
+        #print(token)
         newline=True
       token = token.rstrip()
       #parse a token
@@ -63,7 +63,7 @@ class tokenizer:
         if a != None:
           token = token[a.start():]
         parse_data = parser.parse(token,True,None)
-        print("parsed",token,"data =",parse_data)
+        #print("parsed",token,"data =",parse_data)
         #tokens.append([f,"line-end",None])
       else:
         parse_data = None
