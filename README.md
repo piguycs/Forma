@@ -1,4 +1,5 @@
-# Forma
+# Forma - THIS IS THE PYTHON IMPLEMENTATION, PLEASE USE WITH CAUTION AS IT IS VERY OUTDATED AND MAY MALFUNCTION FOR NO REASON.
+> For the C++ implementation please go to https://github.com/HUSKI3/FormaC
 
 A programming language made for simplicity and ease of use. Forma is a C++ derivative with a pythonic syntax, it still maintains a few parts of the C++ language.
 
